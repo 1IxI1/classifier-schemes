@@ -5,9 +5,6 @@ Used to recognize and classify transactions' types by TON Center's [event classi
 
 ## Existing matchers:
 
-- ElectionDepositStakeBlockMatcher(),
-- ElectionRecoverStakeBlockMatcher(),
-
 #### Jettons:
 - [x] Jetton Transfer
 - [x] Jetton Mint
