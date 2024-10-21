@@ -1,0 +1,75 @@
+{
+  "level": 0,
+  "on_contract": "A",
+  "on_alias": "User",
+  "op": "0xf7467269",
+  "op_alias": "-",
+  "optional": false,
+  "bodyParser": null,
+  "children": [
+    {
+      "level": 1,
+      "on_contract": "B",
+      "on_alias": "tsTON Wallet",
+      "op": "0x595f07bc",
+      "op_alias": "Jetton Burn Request",
+      "optional": false,
+      "bodyParser": "body.load_uint(32)\ndata[\"query_id\"] = body.load_uint(64)\ndata[\"burnt_amount\"] = body.load_coins()\ndata[\"initiator\"] = sender_address\ndata[\"receiver\"] = body.load_address()",
+      "children": [
+        {
+          "level": 2,
+          "on_contract": "C",
+          "on_alias": "tsTON Master",
+          "op": "0x7bdd97de",
+          "op_alias": "Jetton Burn Notification",
+          "optional": false,
+          "bodyParser": null,
+          "children": [
+            {
+              "level": 3,
+              "on_contract": "D",
+              "on_alias": "Liq. Staking Pool",
+              "op": "0x319b0cdc",
+              "op_alias": "Withdraw from Pool",
+              "optional": false,
+              "bodyParser": null,
+              "children": [
+                {
+                  "level": 4,
+                  "on_contract": "E",
+                  "on_alias": "Payout NFT Collection",
+                  "op": "0x1674b0a0",
+                  "op_alias": "Mint Payment Request",
+                  "optional": false,
+                  "bodyParser": null,
+                  "children": [
+                    {
+                      "level": 5,
+                      "on_contract": "F",
+                      "on_alias": "Payout NFT Item",
+                      "op": "0x132f9a45",
+                      "op_alias": "Init NFT",
+                      "optional": false,
+                      "bodyParser": null,
+                      "children": [
+                        {
+                          "level": 6,
+                          "on_contract": "A",
+                          "on_alias": "User",
+                          "op": "0x5138d91",
+                          "op_alias": "Ownership Assigned",
+                          "optional": false,
+                          "bodyParser": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
